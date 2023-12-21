@@ -1,15 +1,15 @@
 <nav class="flex items-center justify-between px-6 py-3 border-b border-gray-100">
     <div id="nav-left" class="flex items-center">
         <div class="font-semibold text-gray-800">
-            <span class="text-xl text-yellow-500">&lt;YELO&gt;</span> Code
+            <span class="text-xl text-yellow-500">&lt;Volt&gt;</span> Code
         </div>
         <div class="ml-10 top-menu">
             <ul class="flex space-x-4">
-                <x-nav-link href="{{ route('home') }}" :active="request()->routeIs('home')">
-                    {{ __('Home') }}
+                <x-nav-link href="{{ route("home") }}" :active="request()->routeIs("home")">
+                    {{ __("Home") }}
                 </x-nav-link>
-                <x-nav-link href="{{ route('posts.index') }}" :active="request()->routeIs('posts.index')">
-                    {{ __('Blog') }}
+                <x-nav-link href="{{ route("posts.index") }}" :active="request()->routeIs("posts.index")">
+                    {{ __("Blog") }}
                 </x-nav-link>
             </ul>
         </div>
@@ -44,27 +44,27 @@
                     <x-slot name="content">
                         <!-- Account Management -->
                         <div class="block px-4 py-2 text-xs text-gray-400">
-                            {{ __('Manage Account') }}
+                            {{ __("Manage Account") }}
                         </div>
 
-                        <x-dropdown-link href="{{ route('profile.show') }}" wire:navigate>
-                            {{ __('Profile') }}
+                        <x-dropdown-link href="{{ route("profile.show") }}" wire:navigate>
+                            {{ __("Profile") }}
                         </x-dropdown-link>
 
                         @if (Laravel\Jetstream\Jetstream::hasApiFeatures())
-                            <x-dropdown-link href="{{ route('api-tokens.index') }}" wire:navigate>
-                                {{ __('API Tokens') }}
+                            <x-dropdown-link href="{{ route("api-tokens.index") }}" wire:navigate>
+                                {{ __("API Tokens") }}
                             </x-dropdown-link>
                         @endif
 
                         <div class="border-t border-gray-200"></div>
 
                         <!-- Authentication -->
-                        <form method="POST" action="{{ route('logout') }}" x-data>
+                        <form method="POST" action="{{ route("logout") }}" x-data>
                             @csrf
 
-                            <x-dropdown-link href="{{ route('logout') }}" @click.prevent="$root.submit();">
-                                {{ __('Log Out') }}
+                            <x-dropdown-link href="{{ route("logout") }}" @click.prevent="$root.submit();">
+                                {{ __("Log Out") }}
                             </x-dropdown-link>
                         </form>
                     </x-slot>
@@ -72,11 +72,11 @@
             </div>
         @else
             <div class="flex space-x-5">
-                <x-nav-link href="{{ route('login') }}" :active="request()->routeIs('login')">
-                    {{ __('Login') }}
+                <x-nav-link href="{{ route("login") }}" :active="request()->routeIs("login")">
+                    {{ __("Login") }}
                 </x-nav-link>
-                <x-nav-link href="{{ route('register') }}" :active="request()->routeIs('register')">
-                    {{ __('Register') }}
+                <x-nav-link href="{{ route("register") }}" :active="request()->routeIs("register")">
+                    {{ __("Register") }}
                 </x-nav-link>
             </div>
         @endauth

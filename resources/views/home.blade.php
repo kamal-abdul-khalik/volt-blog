@@ -1,5 +1,5 @@
 <x-app-layout>
-    @section('hero')
+    @section("hero")
         <div class="w-full py-32 text-center">
             <h1 class="text-2xl font-bold text-center text-gray-700 md:text-3xl lg:text-5xl">
                 Welcome to <span class="text-yellow-500">&lt;YELO&gt;</span> <span class="text-gray-900"> News</span>
